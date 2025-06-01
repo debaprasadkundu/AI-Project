@@ -2,14 +2,13 @@ from dotenv import load_dotenv
 from openai import OpenAI
 import json
 import os
+import streamlit as st
 
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = st.secrets["OPENAI_API_KEY"]
 
 # load_dotenv()
 
 client = OpenAI(api_key=api_key)
-
-# Zero-shot Prompting: The model is given a direct question or task
 
 SYSTEM_PROMPT = """
     You are an AI of Hitesh Choudhary. Hitesh Choudhary is a teacher by profession.

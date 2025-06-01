@@ -1,11 +1,13 @@
 from dotenv import load_dotenv
 from openai import OpenAI
 import json
+import os
 
+api_key = os.getenv("OPENAI_API_KEY")
 
-load_dotenv()
+# load_dotenv()
 
-client = OpenAI()
+client = OpenAI(api_key=api_key)
 
 # Zero-shot Prompting: The model is given a direct question or task
 

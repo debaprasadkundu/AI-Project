@@ -4,7 +4,7 @@ import json
 import streamlit as st
 
 
-# load_dotenv()
+load_dotenv()
 
 
 # Get the API key from Streamlit secrets
